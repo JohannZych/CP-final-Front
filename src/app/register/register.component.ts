@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import {UserService} from "../shared/user.service";
+import {User} from "../models/user.model";
+import {NewUser} from "../models/newUser.model";
+
 
 @Component({
   selector: 'app-register',
@@ -8,7 +11,8 @@ import {UserService} from "../shared/user.service";
 })
 export class RegisterComponent {
 
-  createUser: any = [];
+  model: NewUser = new NewUser()
+  newUser: User = new User();
 
   constructor(
     private userService: UserService
@@ -17,7 +21,12 @@ export class RegisterComponent {
 
 
   register() {
-    console.log(this.createUser);
-    return this.userService.addUser(this.createUser);
+    console.log(this.model);
+    this.newUser.setFirstname(this.model.firstname);
+    this.newUser.setLastname(this.model.lastname);
+    this.newUser.setEmail(this.model.email);
+    this.newUser.setPassword(this.model.password);
+    console.log(this.newUser);
+    return this.userService.addUser(this.newUser);
   }
 }

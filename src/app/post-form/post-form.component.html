@@ -1,0 +1,25 @@
+<div class="form-container">
+  <form #postForm="ngForm" (ngSubmit)="postForm.valid && onSubmit()" class="register-form">
+    <label for="title">Titre</label>
+    <div class="update-error" *ngIf="title.errors && postForm.submitted">
+      <span *ngIf="title.errors?.['required']">Le champ Titre est requis</span>
+    </div>
+    <input id="title" name="title" type="text" [(ngModel)]="model.title" #title="ngModel" required
+           [ngStyle]="title.errors && postForm.submitted ? {'border-color': 'red'} : {'border-color': 'gray'}">
+    <label for="rating">Note</label>
+    <input id="rating" name="rating" type="number" [(ngModel)]="model.rating" #rating="ngModel" required>
+    <label for="content">Contenu</label>
+    <div class="update-error" *ngIf="content.errors && postForm.submitted">
+      <span *ngIf="content.errors?.['required']">Le champ Contenu est requis</span>
+      <span *ngIf="content.errors?.['maxlength']">Maximum de 250 caractères</span>
+      <span *ngIf="content.errors?.['minlength']">Minimum de 10 caractères</span>
+    </div>
+    <textarea id="content" name="content" type="text" [(ngModel)]="model.content" #content="ngModel"
+              required rows="10" cols="52" maxlength="250" minlength="10"
+              [ngStyle]="content.errors && postForm.submitted ? {'border-color': 'red'} : {'border-color': 'gray'}">
+      </textarea>
+    <div class="button-container">
+      <button type="submit">Envoyer</button>
+    </div>
+  </form>
+</div>

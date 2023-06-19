@@ -5,26 +5,26 @@
     <div class="update-error" *ngIf="email.errors && registerForm.submitted">
       <span *ngIf="email.errors?.['required']">Le champ Email est requis</span>
     </div>
-    <input id="email" name="email" type="email" [(ngModel)]="createUser.email" #email="ngModel" required email
+    <input id="email" name="email" type="email" [(ngModel)]="model.email" #email="ngModel" required email
            [ngStyle]="email.errors && registerForm.submitted ? {'border-color': 'red'} : {'border-color': 'gray'}">
     <label for="firstname">Prénom</label>
     <div class="update-error" *ngIf="firstname.errors && registerForm.submitted">
       <span *ngIf="firstname.errors?.['required']">Le champ Nom est requis</span>
     </div>
-    <input id="firstname" name="firstname" type="text" [(ngModel)]="createUser.firstname" #firstname="ngModel"
+    <input id="firstname" name="firstname" type="text" [(ngModel)]="model.firstname" #firstname="ngModel"
            required
            [ngStyle]="firstname.errors && registerForm.submitted ? {'border-color': 'red'} : {'border-color': 'gray'}">
     <label for="lastname">Nom</label>
     <div class="update-error" *ngIf="lastname.errors && registerForm.submitted">
       <span *ngIf="lastname.errors?.['required']">Le champ Prénom est requis</span>
     </div>
-    <input id="lastname" name="lastname" type="text" [(ngModel)]="createUser.lastname" #lastname="ngModel" required [ngStyle]="lastname.errors && registerForm.submitted ? {'border-color': 'red'} : {'border-color': 'gray'}">
+    <input id="lastname" name="lastname" type="text" [(ngModel)]="model.lastname" #lastname="ngModel" required [ngStyle]="lastname.errors && registerForm.submitted ? {'border-color': 'red'} : {'border-color': 'gray'}">
 
           <label for="password">Mot de passe</label>
           <div class="update-error" *ngIf="password.errors && registerForm.submitted">
             <span *ngIf="password.errors?.['required']">Le champ Mot de passe est requis</span>
           </div>
-          <input id="password" name="password" type="password" [(ngModel)]="createUser.password" #password="ngModel"
+          <input id="password" name="password" type="password" [(ngModel)]="model.password" #password="ngModel"
                  required
                  [ngStyle]="password.errors && registerForm.submitted ? {'border-color': 'red'} : {'border-color': 'gray'}">
     <div class="button-container">

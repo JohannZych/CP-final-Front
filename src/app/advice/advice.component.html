@@ -1,0 +1,8 @@
+<div class="advice-container">
+  <section class="card-advice-container">
+    <app-card-advice *ngFor=" let advice of adviceList " [advice]="advice">
+    </app-card-advice>
+  </section>
+  <button (click)="newPost()">+</button>
+</div>
+

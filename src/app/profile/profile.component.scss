@@ -1,0 +1,58 @@
+.profile-container {
+  padding-top: 2em;
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font);
+  background: url("../../assets/images/hero-bg.jpg") no-repeat;
+  color: white;
+  padding-bottom: 2em;
+  h2{
+    padding: 2em 0;
+    text-align: center;
+  }
+  .profile-form {
+    margin: auto;
+    padding: 1em;
+    width: 40vw;
+    height: auto;
+    border: 1px solid orangered;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    input {
+      width: 20vw;
+      height: 2em;
+    }
+    a {
+      text-decoration: none;
+      color: #e36131;
+    }
+  }
+  .logged {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 30vw;
+    height: 45vh;
+    border: 1px solid orangered;
+    border-radius: 10px;
+    button {
+      width: 8em;
+    }
+  }
+  button {
+    border: none;
+    color: white;
+    background-color: #e36131;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 5px;
+  }
+  .field-profile {
+    border-bottom: 1px solid #e36131;
+    text-align: center;
+    margin: 1em auto;
+  }
+}

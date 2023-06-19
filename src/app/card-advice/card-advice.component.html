@@ -3,7 +3,7 @@
     <h2><em>{{advice.title}}</em></h2>
     <p>Note : {{advice.rating}}/5</p>
     <div class="card-content">
-      {{advice.content}}
+      {{advice.content | slice:0:100 }}
     </div>
   </div>
 </div>

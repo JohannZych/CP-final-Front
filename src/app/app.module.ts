@@ -10,6 +10,10 @@ import {HttpClientModule} from "@angular/common/http";
 import { AboutUsComponent } from './about-us/about-us.component';
 import { RegisterComponent } from './register/register.component';
 import {FormsModule} from "@angular/forms";
+import { FooterComponent } from './footer/footer.component';
+import { AdviceComponent } from './advice/advice.component';
+import { ProfileComponent } from './profile/profile.component';
+import { PostFormComponent } from './post-form/post-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import {FormsModule} from "@angular/forms";
     HomeComponent,
     CardAdviceComponent,
     AboutUsComponent,
-    RegisterComponent
+    RegisterComponent,
+    FooterComponent,
+    AdviceComponent,
+    ProfileComponent,
+    PostFormComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {environment} from "../../environement/environement";
 import {Advice} from "../models/advice.model";
+import {User} from "../models/user.model";
 
 
 @Injectable({
@@ -22,6 +23,10 @@ export class AdviceService {
 
   public getAdviceById(id: string): Observable<Advice> {
     return this.http.get<Advice>(environment._API_ADVICE_URL.concat('/', id));
+  }
+
+  public getAdviceByUser(id: string): any {
+    return this.http.get<Advice>(environment._API_ADVICE_URL.concat('/user/', id));
   }
 
   public addAdvice(newAdvice: Advice): void {

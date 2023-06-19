@@ -19,6 +19,10 @@ export class UserService {
     return this.http.get<User[]>(environment._API_USER_URL);
   }
 
+  public getUserByEmail(email: string): Observable<User> {
+    return this.http.get<User>(environment._API_USER_URL.concat('/email/', email));
+  }
+
   public getUserById(id: string): Observable<User> {
     return this.http.get<User>(environment._API_USER_URL.concat('/', id));
   }
@@ -26,6 +30,7 @@ export class UserService {
   public addUser(newUser: User): void {
     // console.log(newUser);
     const headers: HttpHeaders = new HttpHeaders({'Content-type': 'application/json'});
+    const body = JSON.stringify(newUser);
     this.http.post<User>(environment._API_USER_URL.concat('/add'), newUser, {'headers': headers}).subscribe();
   }
 

@@ -1,5 +1,5 @@
 .header-container {
-  height: 10vh;
+  height: 6vh;
   background-color: #2d2c2c;
   font-family: var(--font);
   font-size: 1.5em;
@@ -10,12 +10,14 @@
     display: flex;
     justify-content: space-around;
     list-style: none;
-    padding-top: 1em
+    padding-top: 0.4em
   }
+
   a {
     text-decoration: none;
     color: white;
   }
+
   .is-active {
     border-bottom: 1px solid white;
     font-style: italic;

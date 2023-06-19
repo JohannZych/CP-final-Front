@@ -1,0 +1,31 @@
+<div class="profile-container">
+  <div class="login-form" *ngIf="!localStorage.getItem('userId')">
+    <h2>Je me connecte</h2>
+    <form #loginUser="ngForm" (ngSubmit)="loginUser.valid && login()" class="profile-form">
+      <label for="username">Email</label>
+      <div class="login-error" *ngIf="email.errors && loginUser.submitted">
+        <span *ngIf="email.errors?.['required']">Le champ email est requis</span>
+      </div>
+      <input id="username" name="username" type="email" [(ngModel)]="model.email" #email="ngModel"
+             [ngStyle]="email.errors && loginUser.submitted ? {'border-color': 'red'} : {'border-color': 'gray'}"
+             required email>
+      <label for="password">Mot de Passe</label>
+      <div class="login-error" *ngIf="password.errors && loginUser.submitted">
+        <span *ngIf="password.errors?.['required']">Le champ mot de passe est requis</span>
+        <span *ngIf="email.errors?.['email']">L'adresse email doit être valide</span>
+      </div>
+      <input id="password" name="password" type="password" [(ngModel)]="model.password" #password="ngModel"
+             [ngStyle]="password.errors && loginUser.submitted ? {'border-color': 'red'} : {'border-color': 'gray'}"
+             required>
+      <button type="submit">Connexion</button>
+      <p class="login-link-container">Pas encore inscrit ? <a href="/home#register">Je m'inscris</a></p>
+    </form>
+  </div>
+  <div class="logged" *ngIf="localStorage.getItem('userId')">
+    <h2>Mon Profil</h2>
+    <div class="field-profile">Email : {{userAuth.email}}</div>
+    <div class="field-profile">Prénom : {{userAuth.firstname}}</div>
+    <div class="field-profile">Nom : {{userAuth.lastname}}</div>
+    <button type="button" (click)="logout()" class="field-profile">Déconnexion</button>
+  </div>
+</div>
