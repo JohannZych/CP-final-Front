@@ -1,0 +1,22 @@
+.home-container{
+  height: 60vh;
+  background: url("../../assets/images/hero-bg.jpg") no-repeat;
+  .card-advice-container{
+    padding-top: 4em;
+    height: 45vh;
+    display: flex;
+    justify-content: space-around;
+  }
+  h2 {
+    font-family: var(--font);
+    font-weight: 400;
+    color: lightgray;
+    text-align: center;
+    border-bottom: 1px solid orangered;
+    padding: 1em 0;
+  }
+  .about-us-container{
+    display: flex;
+    justify-content: center;
+  }
+}

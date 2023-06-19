@@ -1,0 +1,13 @@
+.about-us-card-container {
+  padding: 2em;
+  display: flex;
+  justify-content: space-around;
+  font-family: var(--font);
+  align-items: center;
+  h2 {
+    border-bottom: 1px solid black;
+    font-style: italic;
+    margin-bottom: 1em;
+    width: 5em;
+  }
+}

@@ -1,0 +1,15 @@
+<div class="home-container">
+  <h2>Les derniers Avis !!</h2>
+  <section class="card-advice-container">
+    <app-card-advice *ngFor=" let advice of adviceList  | slice:0:3; let i=index" [advice]="advice">
+    </app-card-advice>
+  </section>
+  <section class="about-us-container">
+    <app-about-us></app-about-us>
+  </section>
+  <section class="register-container">
+    <app-register></app-register>
+  </section>
+</div>
+
+

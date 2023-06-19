@@ -1,0 +1,27 @@
+.card-advice-container {
+  border-radius: 25px;
+  width: 25vw;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+  border: 1px solid white;
+  font-family: var(--font);
+  color: white;
+  h2 {
+    color: #e36131;
+  }
+  p {
+    padding-top: 2em;
+  }
+  .card-content {
+    margin-top: 2em;
+    height: 10vh;
+    width: 15vw;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 1em;
+    color: #2d2c2c;
+  }
+}

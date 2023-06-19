@@ -1,0 +1,23 @@
+.header-container {
+  height: 10vh;
+  background-color: #2d2c2c;
+  font-family: var(--font);
+  font-size: 1.5em;
+  color: white;
+  font-weight: 200;
+
+  .header-section {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding-top: 1em
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .is-active {
+    border-bottom: 1px solid white;
+    font-style: italic;
+  }
+}
