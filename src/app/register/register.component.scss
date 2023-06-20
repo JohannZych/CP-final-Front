@@ -21,8 +21,13 @@
     align-items: center;
     gap: 1em;
     input {
+      border: none;
       width: 20vw;
       height: 2em;
+      border-radius: 10px;
+    }
+    label {
+      font-style: italic;
     }
     button {
       border: none;

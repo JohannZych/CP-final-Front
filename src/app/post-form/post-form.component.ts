@@ -37,7 +37,7 @@ export class PostFormComponent implements OnInit {
   onSubmit() {
     this.model.user = this.userAuth;
     this.adviceService.addAdvice(this.model);
-    this.router.navigate(['/advice']);
+    this.router.navigate(['/home']);
   }
 
 

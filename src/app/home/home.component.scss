@@ -1,5 +1,5 @@
 .home-container{
-  height: 60vh;
+  height: 75vh;
   background: url("../../assets/images/hero-bg.jpg") no-repeat;
   .card-advice-container{
     padding-top: 4em;
@@ -13,10 +13,26 @@
     color: lightgray;
     text-align: center;
     border-bottom: 1px solid orangered;
-    padding: 1em 0;
+    padding-bottom: 1em;
+    margin: 0 8em;
   }
   .about-us-container{
     display: flex;
     justify-content: center;
+  }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    padding-top: 2em;
+    input {
+      width: 30vw;
+      height: 5vh;
+      border: 2px solid #e36131;
+      font-family: var(--font);
+      font-size: 1em;
+      padding-left: 0.5em;
+      border-radius: 10px;
+    }
   }
 }

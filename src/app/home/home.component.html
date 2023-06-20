@@ -1,7 +1,15 @@
 <div class="home-container">
+  <section class="search-container">
+    <label for="search"></label>
+    <input type="search" placeholder="Rechercher dans tous les avis" class="advice-search" id="search" name="search"
+           [(ngModel)]="searchInput" (ngModelChange)="searchMethod()">
+  </section>
   <h2>Les derniers Avis !!</h2>
+
   <section class="card-advice-container">
-    <app-card-advice *ngFor=" let advice of adviceList  | slice:0:3; let i=index" [advice]="advice">
+    <app-card-advice
+      *ngFor=" let advice of adviceListFiltered.length > 0 ? (adviceListFiltered | slice:0: 3) : adviceList  | slice:0:3; let i=index"
+      [advice]="advice">
     </app-card-advice>
   </section>
   <section class="about-us-container">

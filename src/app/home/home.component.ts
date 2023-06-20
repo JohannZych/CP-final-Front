@@ -10,6 +10,8 @@ import {AdviceService} from "../shared/advice.service";
 export class HomeComponent implements OnInit {
 
   adviceList: Advice[] = [];
+  adviceListFiltered: Advice[] = [];
+  searchInput: string ='';
   advice!: Advice;
 
   constructor(
@@ -21,7 +23,11 @@ export class HomeComponent implements OnInit {
     this.adviceService.getAdvices().subscribe((res) => {
       this.adviceList = res;
     });
+  }
 
-
+  searchMethod() {
+      this.adviceListFiltered = this.adviceList.filter((advice) => {
+        return advice.title.toLowerCase().includes(this.searchInput.toLowerCase());
+      });
   }
 }
